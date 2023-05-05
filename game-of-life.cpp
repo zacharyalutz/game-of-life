@@ -19,7 +19,7 @@ int main() {
   {
     for (int j = 0; j < width; j++)
     {
-      grid[i][j] = rand() % 2;
+      grid[i][j] = rand() % 3;
     }
   }
 
@@ -53,7 +53,7 @@ int main() {
 
         // Rules of the game: Current cell is alive if either
         // (a) 3 neighbors are alive; or
-        // (b) 2 neighbors and alive
+        // (b) 2 neighbors are alive and the cell itself was previously alive
         newGrid[i][j] = alive == 3 || (alive == 2 && grid[i][j]);
 
         // If the new grid is different from the old grid, then the game is still going
